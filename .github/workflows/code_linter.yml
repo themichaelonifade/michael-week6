@@ -25,4 +25,3 @@ jobs:
           # Enable linting for Bash and YAML files specifically
           VALIDATE_BASH: true
           VALIDATE_YAML: true
-
