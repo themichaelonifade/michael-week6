@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository's code
-    - name: Check out repository
-      uses: actions/checkout@v2
+      # Step 1: Check out the repository's code
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-    # Step 2 Run Super-Linter
-    - name: Run Super-Linter
-      uses: github/super-linter@v4
-      env:
-        # Use the Github token to authenticate the linter run
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # Set the main branch as the default branch
-        DEFAULT_BRANCH: main
-        # Enable linting for Bash and YAML files specifically 
-        VALIDATE_BASH: true
-        VALIDATE_YAML: true
+      # Step 2 Run Super-Linter
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          # Use the Github token to authenticate the linter run
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Set the main branch as the default branch
+          DEFAULT_BRANCH: main
+          # Enable linting for Bash and YAML files specifically 
+          VALIDATE_BASH: true
+          VALIDATE_YAML: true
